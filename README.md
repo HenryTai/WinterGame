@@ -3,6 +3,7 @@
 
 
 Remark:
+
 1. Code clear; Try to make the code easier understandable, dont make it like a messy
 
 2. Code with commments; Help other understand your code
