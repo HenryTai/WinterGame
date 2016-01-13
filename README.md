@@ -1,5 +1,8 @@
 # Simple Guide
 
+Update your local resp (file in your computer) from your git:
+
+git pull origin
 
 
 Remark:
