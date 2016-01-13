@@ -13,6 +13,7 @@ MAKE SURE YOU ARE IN THE GIT PROJECT FILE BEFORE YOU DO THE PROCEDURE BELOW:
 
 
 Upload to our project site:
+- after your code something new
 - all changes made to your own local repository (files in your computer), you can repeat as many times as you want here
 ```
 git add -A
@@ -22,7 +23,7 @@ git commit -m "put your simple commit message here"
 ```
 git push
 ```
-- upload to our project repository
+- upload to our project repository; remember write comment what have you mainly changed in the github (you ll see the field later)
 Go to github webpage, your github repository, click the green button "New pull request", and follow the instruction. (do not confirm the pull request, have a look at Remark 4.)
 
 
@@ -36,6 +37,7 @@ Follow the procedure to accpet the update (this pull request should be confirmed
 ```
 git pull origin
 ```
+- contribute your knowledge and skills to this project (do code)
 
 
 
