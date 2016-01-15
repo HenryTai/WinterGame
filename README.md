@@ -1,4 +1,7 @@
 # Simple Guide
+
+Our target to make a game like this: http://www.4399.com/flash/166963_2.htm
+
 Setup at ...\Documents\GitHub:
 ```
 git clone <URL>
