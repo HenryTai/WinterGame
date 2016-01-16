@@ -16,8 +16,12 @@ public class Main extends Canvas implements Runnable{
 	
 	private boolean isRunning = false;
 	
+	private GameObjectHandler handler;
+	
 	public Main(){
 		new Window(WIDTH, HEIGHT, "Skip the ball!", this);
+		handler = new GameObjectHandler();
+		handler.addObject(new Player(100, 100, GameObjectID.Player));
 	}
 	
 	//Starting the content of game inside the window
@@ -61,7 +65,7 @@ public class Main extends Canvas implements Runnable{
 			}
 			
 			//draw everything of the game at that time
-			if(isRunning)	render();
+			if(isRunning)	updateGameGraphic();
 			
 			frames++;
 			
@@ -78,11 +82,11 @@ public class Main extends Canvas implements Runnable{
 	}
 	
 	public void updateGameLogic(){
-		
+		handler.updateGameObjectsLogic();
 	}
 	
 	//draw everything function
-	public void render(){
+	public void updateGameGraphic(){
 		BufferStrategy bs = this.getBufferStrategy();
 		if(bs == null){
 			this.createBufferStrategy(3);
@@ -93,6 +97,8 @@ public class Main extends Canvas implements Runnable{
 		
 		g.setColor(Color.black);
 		g.fillRect(0, 0, WIDTH,HEIGHT);
+		
+		handler.updateGameObjectsGraphic(g);
 		
 		g.dispose();
 		bs.show();
