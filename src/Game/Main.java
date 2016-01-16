@@ -19,9 +19,13 @@ public class Main extends Canvas implements Runnable{
 	private GameObjectHandler handler;
 	
 	public Main(){
-		new Window(WIDTH, HEIGHT, "Skip the ball!", this);
 		handler = new GameObjectHandler();
-		handler.addObject(new Player(100, 100, GameObjectID.Player));
+		
+		this.addKeyListener(new Controller(handler));
+		
+		new Window(WIDTH, HEIGHT, "Skip the ball!", this);
+		
+		handler.addObject(new Player(0, 0, GameObjectID.Player));
 	}
 	
 	//Starting the content of game inside the window

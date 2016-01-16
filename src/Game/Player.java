@@ -7,10 +7,6 @@ public class Player extends GameObject {
 
 	public Player(int x, int y, GameObjectID id) {
 		super(x, y, id);
-		
-		//Set changing velocity value
-		veloX = 1;
-		veloY = 1;
 	}
 
 	@Override
