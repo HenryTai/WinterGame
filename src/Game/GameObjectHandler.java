@@ -21,11 +21,17 @@ public class GameObjectHandler {
 		}
 	}
 	
+	//add object to the game objects handler
 	public void addObject(GameObject object){
 		gameObjects.add(object);
 	}
 	
-	public void addRemove(GameObject object){
+	//remove object from the game object handler
+	public void removeObject(GameObject object){
 		gameObjects.remove(object);
+	}
+	
+	public LinkedList<GameObject> getAllObjects(){
+		return this.gameObjects;
 	}
 }
