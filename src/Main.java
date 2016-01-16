@@ -6,10 +6,10 @@ import java.awt.image.BufferStrategy;
 
 public class Main extends Canvas implements Runnable{
 
-	private static final long serialVersionUID = 1L;
+	public static final long serialVersionUID = 1L;
 	
 	//Size of the Window
-	private static final int WIDTH = 450, HEIGHT = WIDTH * 12 / 9;
+	public static final int WIDTH = 450, HEIGHT = WIDTH * 12 / 9;
 	
 	private Thread thread;
 	
@@ -24,7 +24,7 @@ public class Main extends Canvas implements Runnable{
 		
 		new Window(WIDTH, HEIGHT, "Skip the ball!", this);
 		
-		handler.addObject(new Player(0, 0, GameObjectID.Player));
+		handler.addObject(new Player(WIDTH/2, HEIGHT - 100, GameObjectID.Player));
 	}
 	
 	//Starting the content of game inside the window
@@ -47,6 +47,7 @@ public class Main extends Canvas implements Runnable{
 	//Game loop that a lot people use it to maintain the animation of the game
 	@Override
 	public void run() {
+		this.requestFocus();
 		long lastLoopTime = System.nanoTime();
 		final double targetFPS = 60.0;
 		final double optimalTime = 1000000000 / targetFPS;
@@ -106,7 +107,13 @@ public class Main extends Canvas implements Runnable{
 		g.dispose();
 		bs.show();
 	}
-
+	
+	//constrain a variable within a boundaries
+	public static int constrain(int var, int min, int max){
+		if(var < min) return var = min;
+		else if(var > max) return var = max;
+		else return var;
+	}
 	public static void main(String[] args) {
 		new Main();
 	}

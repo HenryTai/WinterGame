@@ -7,7 +7,7 @@ import javax.swing.JFrame;
 //This class define the object which display the window
 public class Window extends Canvas{
 
-	private static final long serialVersionUID = 1L;
+	public static final long serialVersionUID = 1L;
 
 	public Window(int width, int height, String title, Main main){
 

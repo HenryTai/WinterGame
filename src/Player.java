@@ -12,6 +12,9 @@ public class Player extends GameObject {
 	public void updateLogic() {
 		x += veloX;
 		y += veloY;
+		
+		x = Main.constrain(x, 0, Main.WIDTH - 30 - 5);
+		y = Main.constrain(y, 0, Main.HEIGHT - 30 -28);
 	}
 
 	@Override
