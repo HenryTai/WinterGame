@@ -24,7 +24,8 @@ public class Main extends Canvas implements Runnable{
 		
 		new Window(WIDTH, HEIGHT, "Skip the ball!", this);
 		
-		handler.addObject(new Player(WIDTH/2, HEIGHT - 100, GameObjectID.Player));
+		handler.addObject(new Player(WIDTH/2, HEIGHT - 100, GameObjectID.Player, handler));
+		handler.addObject(new Enemy(WIDTH/2, 0, GameObjectID.Player));
 	}
 	
 	//Starting the content of game inside the window

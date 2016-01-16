@@ -1,5 +1,6 @@
 
 import java.awt.Graphics;
+import java.awt.Rectangle;
 
 public abstract class GameObject {
 	protected int x,y; //position of the object in the game
@@ -15,7 +16,10 @@ public abstract class GameObject {
 	public abstract void updateLogic();
 	
 	public abstract void updateGraphic(Graphics g);
-
+	
+	//used to check if 2 object will be intersect
+	public abstract Rectangle getBounds();
+	
 	public int getX() {
 		return x;
 	}
